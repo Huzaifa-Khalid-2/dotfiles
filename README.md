@@ -1,3 +1,5 @@
+dotfiles
+
 # !/bin/bash
 #
 # On  a new AWS Debian Buster EC2 Instance you will have to do the following before running this 

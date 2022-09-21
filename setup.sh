@@ -24,31 +24,18 @@ git config -- global fetch.rebase true
 # Create folders
 mkdir /ICS4U
 mkdir /ICS4U/unit1
-mkdir /ICS4U/unit1/unit1-01
-mkdir /ICS4U/unit1/unit1-02
-mkdir /ICS4U/unit1/unit1-03
-mkdir /ICS4U/unit1/unit1-04
-mkdir /ICS4U/unit1/unit1-05
-mkdir /ICS4U/unit1/unit1-06
-mkdir /ICS4U/unit1/unit1-07
 mkdir /ICS4U/unit2
-mkdir /ICS4U/unit2/unit2-01
-mkdir /ICS4U/unit2/unit2-02
-mkdir /ICS4U/unit2/unit2-03
-mkdir /ICS4U/unit2/unit2-04
-mkdir /ICS4U/unit2/unit2-05
-mkdir /ICS4U/unit2/unit2-06
-mkdir /ICS4U/unit2/unit2-07
-mkdir /ICS4U/unit2/unit2-08
-mkdir /ICS4U/unit2/unit2-09
-mkdir /ICS4U/unit2/unit2-10
-mkdir /ICS4U/unit3/unit3-01
-mkdir /ICS4U/unit3/unit3-01
-mkdir /ICS4U/unit3/unit3-02
-mkdir /ICS4U/unit3/unit3-03
-mkdir /ICS4U/unit3/unit3-04
+mkdir /ICS4U/unit3
 mkdir /ICS4U/unit4
-mkdir /ICS4U/unit4/unit4-01
-mkdir /ICS4U/unit4/unit4-02
 
-
+# SSH keys
+echo "Press Enter 3 times."
+ssh-keygen -t ed25519 -C "huzaifa.khalid@mths.ca"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+echo "Copy the output from the most recent command and add it to github SSH key list. "
+read any_key
+echo "Write down Yes."
+echo "Press the Enter button."
+read any_key
+ssh -T git@github.com

@@ -47,3 +47,10 @@ echo "Write down Yes."
 echo "Press the Enter button."
 read any_key
 ssh -T git@github.com
+
+# neovim
+mkdir .config
+cd .config/
+mkdir nvim
+cd nvim/
+touch init.lua

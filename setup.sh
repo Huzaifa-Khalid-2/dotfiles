@@ -33,6 +33,14 @@ echo "Press Enter 3 times."
 ssh-keygen -t ed25519 -C "huzaifa.khalid@mths.ca"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
+
+# typescript
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+command -v nvm
+nvm install node --lst
+nvm install-latest-npm
+
 echo "Copy the output from the most recent command and add it to github SSH key list. "
 read any_key
 echo "Write down Yes."

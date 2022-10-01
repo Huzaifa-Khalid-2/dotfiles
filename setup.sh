@@ -41,6 +41,7 @@ command -v nvm
 nvm install node --lst
 nvm install-latest-npm
 
+# Github SSH
 echo "Copy the output from the most recent command and add it to github SSH key list. "
 read any_key
 echo "Write down Yes."

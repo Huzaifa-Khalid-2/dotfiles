@@ -1,18 +1,7 @@
 # !/bin/bash
-#
-# On  a new AWS Debian Buster EC2 Instance you will have to do the following before running this 
-#
-# sudo apt update
-# sudo apt install -y git
-# 
-# then ...
-# git clone https://github.com/ICS4U-1-2022/dotfiles.git
-# cd .dotfiles.git && sh ./setup.sh
-#
+
 # update and upgrade system 
-echo Update and upgrade system
-sudo apt-get update
-sudo apt-get full-upgrade -y
+sudo apt update && sudo apt -y dist-upgrade
 
 # Configure Git
 git config --global user.email "huzaifa.khalid@mths.ca"
@@ -49,9 +38,13 @@ echo "Press the Enter button."
 read any_key
 ssh -T git@github.com
 
-# neovim
-mkdir .config
-cd .config/
-mkdir nvim
-cd nvim/
-touch init.lua
+# Typescript
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+command -v nvm
+nvm install node --lst
+nvm install-latest-npm
+
+# Restart Terminal
+echo Done! Rebooting...
+sudo reboot now
